@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="#9ad14e"
+    tools:context="com.homework.him.simpleweatherapp.MainActivity">
+
+
+    <TextView
+        android:id="@+id/titleText"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Weather Now"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
+        android:elevation="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/titleText"
+        android:id="@+id/linearLayout"
+       >
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="textPersonName"
+            android:elevation="8dp"
+            android:hint="Search location..." />
+
+        <ImageButton
+            android:elevation="8dp"
+            android:id="@+id/searchButton"
+            android:layout_width="50dp"
+            android:tint="#ec0d0d"
+            android:backgroundTint="#9ad14e"
+            android:layout_height="match_parent"
+
+            app:srcCompat="@drawable/search_icon" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="15dp"
+        android:layout_height="300dp"
+        android:backgroundTint="#ffffff"
+        android:id="@+id/cardView"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/desciptionText"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_alignBottom="@+id/weatherImage"
+                android:layout_alignLeft="@+id/pressureText"
+                android:layout_alignStart="@+id/pressureText" />
+
+            <TextView
+                android:id="@+id/pressureText"
+                android:textColor="#000000"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+
+                android:textSize="18sp"
+                android:layout_below="@+id/temperatureText"
+                android:layout_alignLeft="@+id/temperatureText"
+                android:layout_alignStart="@+id/temperatureText"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:textStyle="bold"
+                android:textColor="#32b0d2"
+
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+
+                android:layout_marginLeft="15dp"
+                android:textSize="30sp"/>
+
+            <ImageView
+                android:id="@+id/weatherImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="25dp" />
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/temperatureText"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+
+                android:textSize="18sp"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_above="@+id/weatherImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/placeName"
+                android:textSize="20sp"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:textStyle="italic"
+                android:textColor="#32b0d2"
+                android:layout_below="@+id/cityName"
+                android:layout_alignLeft="@+id/cityName"
+                android:layout_alignStart="@+id/cityName" />
+
+            <TextView
+                android:id="@+id/countryName"
+                android:layout_width="60dp"
+                android:textColor="#32b0d2"
+                android:textSize="25sp"
+                android:layout_height="50dp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/cityName"
+                android:layout_toEndOf="@+id/cityName" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
